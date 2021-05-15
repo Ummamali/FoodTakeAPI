@@ -20,7 +20,7 @@ items = {
     'kababSeekh': {
         'name': 'Pindi Seekh Kababs',
         'abstract': "Raja g fresh kababs",
-        'price': 1049.99,
+        'price': 1249.99,
         'amount': 0
     },
     'kababShami': {
@@ -35,8 +35,8 @@ items = {
 @app.route('/items')
 @cross_origin()
 def test():
-    sleep(1)
-    return jsonify(items)
+    sleep(2)
+    return jsonify({'status': 200, 'payload': items})
 
 
 @app.route('/order', methods=('POST',))
